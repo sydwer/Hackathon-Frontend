@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+header{
+    font-family: 'Amatic SC', cursive;
+    color:red;
+    height: 12rem;
+    font-size: 15rem;
+    padding-bottom: 25px;
+}
+
+#innerDiv{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+body{
+    background-image: url('https://preview.redd.it/1sy1b2g5bl411.jpg?width=852&auto=webp&s=844c316d8d4641ec4114f441335f16fa608bec97');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.oneCard{
+    display: flex;
+    justify-content: center;
+}
+
+.oneCard>img:hover{
+    box-shadow: 10px 15px 5px #702c2b
+}
+
+.cardImg{
+    height: 100%;
+    width: 45rem;
+    max-width: 100%;
+   padding: 5px;
+   background-color:#a9a27f;
+}
+
+h1{
+    color: cornsilk;
+    font-size: 100px;
+    font-family: 'Amatic SC', cursive;
+}
+
+h2{
+    color: cornsilk;
+    font-size: 100px;
+    font-family: 'Amatic SC', cursive;
+}
