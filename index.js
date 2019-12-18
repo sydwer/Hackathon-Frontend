@@ -10,28 +10,19 @@ let hp = []
 
 
 
-function calcPoints(points){
-    newPoints = points.reduce((a, b) => a + b, 0)
-    return newPoints
-}
-function calcHp(hp){
-    newHp = hp.reduce((a, b) => a + b, 1)
-    return newHp
-}
-
 
 const allInfo = [
 
 {
-extra_life:-1,
-points:0, 
+extra_life:0,
+points:110, 
 img:'https://lj3wtq.ch.files.1drv.com/y4mZdAKwlq4brCcZx6T4B7TYWNQlSkF6TLf-Wtyv_LozQdU-U_xHaWcE9TcwVEUMohaZIH_QAmN-snliycAqoKb1ueguooglbNo4a6XspxuQiTLtt9rBCrWmvplFtuzSisOOISfmaC7WaAk2eZ5Zq4emcImmJaOcciPvuUmiBXRESkcXccoQ64FTjVnbHoSGvkwPMV4JXXTqi106oNva7IO3g?width=368&height=525&cropmode=none',
    
 },
 {
     img: 'https://j53wtq.ch.files.1drv.com/y4mAeW_stbl8cZVGm0kTYhmRjrHRK3kT2Vd4BqdP70ep1US7mn-zT25KqmWZEQFv-EKH_dZ9Mf8955KuJf6ozBJzA9sdxkmnSOhNlZUTfbs6Lb9V3O9sG1A-au5sRoJngAjP5qMdZGTWNqBlOXYRi-jePYAqEAGlneD5jYG78f7n5MgJ7-NfZRBbkwFeSC5U8588dvTdD09fCPgf2Cg3ISuIw?width=368&height=525&cropmode=none',
     points: 0,
-    extra_life: -1
+    extra_life: -2
 },
 {
     img: 'https://lz0mnw.ch.files.1drv.com/y4mZBbut6Og51ECJ6qn1tuXNRh74nslO74sOFf_iKP6uD9PpaY8WG-MX7qtIgOZheQYPsT54Qy5QW_gRRJJ_AwzP6XwEfEQoiXBdtR-FG2o13ztoMW4EJgb9_XxCO6mmj8j2nCNqPbcbVDSxA36VFCTNgWIWOAMDvidKn5tIsUcyh0FNqAV0ST4K-DZVnmPspRcUY9Lx3-sTqAw_fZOcqOWBQ?width=969&height=1352&cropmode=none',
@@ -111,7 +102,7 @@ img:'https://lj3wtq.ch.files.1drv.com/y4mZdAKwlq4brCcZx6T4B7TYWNQlSkF6TLf-Wtyv_L
 {
     img: 'https://kz2lkg.ch.files.1drv.com/y4mcr1JSxKEw154V6ec1Nb8HNyfAgb-NZG5Si-sDu4mujfAK6zpkoHa0VyKVzK5iheZf7h1JD0ZcDf5AyxkuP-8ICkfoim57IJrpFwvzzZAob3_fe5LkGzp3hupDK83fjbH37egVrM-qDKWVWY6PEjDGEQgf5r9SeKQ7jVVePDClQBYdVZgzqGHa-2V5XjQ9-Psl67DoTFVky4KP-93dqsJWg?width=969&height=1352&cropmode=none',
     extra_life: 0,
-    points: 420
+    points: 400
 },
 {
     img: 'https://whfbka.ch.files.1drv.com/y4mXaisgfMvk_s3khDyV-TPKf4DkBfl4uLYgAdBjdJeomqN08X9W1aiPhnqN3Yiwylrhyqs71wsss-4CZl4ByCilL2kJ9o62o9Ge5IYfPOLXUx9JP0nvQKXYBigK5RojhKxTCHiWSwuNYZI_32WdReY1RCxv2M8xmmoyzLyBTeYaK7j-_IX-OEhZ30iH-zJNai8V5fSoMRsGZInvi5NzguTGQ?width=368&height=525&cropmode=none',
@@ -120,22 +111,22 @@ img:'https://lj3wtq.ch.files.1drv.com/y4mZdAKwlq4brCcZx6T4B7TYWNQlSkF6TLf-Wtyv_L
 },
 {
     img: 'https://kp2lkg.ch.files.1drv.com/y4m98fZ_vg-VB63PXPl9uU1HbcQmxquGaEtcqrtS3uS809C-bTp8IAhZe5h5cCt3EVplYyIpW2O6Sy1jEe9L_n4gVjrU5TmQWYsmlLpXUdKH_yo9S9OF0qhGAMHFp83yh8NQwYplz6I9OmWH7rJdSmXusiSHwNJznf-gNitM-YvSY1R5E2GXFZ_qbzyACB4ZRfRQ8dqOSPED7NdKdNasjb-vw?width=368&height=525&cropmode=none',
-    extra_life: 0,
+    extra_life: -1,
     points: -50
 },
 {
     img: 'https://kp2lkg.ch.files.1drv.com/y4m98fZ_vg-VB63PXPl9uU1HbcQmxquGaEtcqrtS3uS809C-bTp8IAhZe5h5cCt3EVplYyIpW2O6Sy1jEe9L_n4gVjrU5TmQWYsmlLpXUdKH_yo9S9OF0qhGAMHFp83yh8NQwYplz6I9OmWH7rJdSmXusiSHwNJznf-gNitM-YvSY1R5E2GXFZ_qbzyACB4ZRfRQ8dqOSPED7NdKdNasjb-vw?width=368&height=525&cropmode=none',
-    extra_life: 0,
+    extra_life: -1,
     points: -50
 },
 {
     img: 'https://m52lkg.ch.files.1drv.com/y4mo31XKQbrg4EURgKqo_T7UJ9BMPFDBBHZ9ufMdxY0ZBty053yK7HdvXvSjINdEpU5_PiLFhquMRw4d5zd8mrIPrGBMk-HI4-SdPYIedNSY9KIeu8Ha7LPBsPCVaOWkNkVLNo8zNG29plUTxpU44bk8RPNJ2J82U70bMSXz1dFvqltix7QoNKUxFz37qp0aPPovlwChYVgHnjTRoyp2SJsHQ?width=969&height=1352&cropmode=none',
-    extra_life: 1,
+    extra_life: 0,
     points: 15
 },
 {
     img: 'https://kp3wtq.ch.files.1drv.com/y4m3p0s-0ViLtEPV32m3mrZwlT_f2QPcizYO46OWOaPS-bOboed8VOs9cNkzhayaIlsejZau34wMoqwg6Mltldsjv88lUJznqjC4AcHYTzVg4RunExR34IgivcNVY0lPL0awLDbghOYed67rSx04yHncDDHClRhsOpcA89J519DjozJZn8XwcMPwpOZytXt_2z_s-nuZxFuBzZnFOFxHlztfg?width=368&height=525&cropmode=none',
-    extra_life: 0,
+    extra_life: -1,
     points: -20 
 },
 {
@@ -176,9 +167,15 @@ img:'https://lj3wtq.ch.files.1drv.com/y4mZdAKwlq4brCcZx6T4B7TYWNQlSkF6TLf-Wtyv_L
 
 ]
 
-fetch('http://127.0.0.1:3000/cards')
+// fetch('http://127.0.0.1:3000/cards')
+fetch('https://pokeapi.co/api/v2/')
 .then(response => response.json())
 .then(store)
+
+function calcPoints(info){
+    newPoints = info.reduce((a, b) => a + b, 0)
+    return newPoints
+}
 
 
 function store(response){
@@ -196,20 +193,27 @@ function flip(event){
         hp.push(randoPic.extra_life)
         event.target.src = randoPic.img
         event.target.classList.toggle('flipped')
-
+        calcPoints(hp)
+        console.log(hp)
+    } 
+    if (calcPoints(hp) < 0){
+        pointsCounter.textContent = 'The Exalted One claims your points.'
+        youGoodBro.textContent = "You've died, and your culting days are over"
+        alert("News From The Exalted One, He Who Knows All: Spoiler Alert, You Did The One Thing I Told You Not To ")
+    }else if(calcPoints(hp) === 0){
+        youGoodBro.textContent = `You've only got one life, cult with care`
+        pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
     }
-    calcHp(hp)
-    if (calcHp(hp) < 1){
-        youGoodBro.textContent = "Ya dead"
-    }else{
-        youGoodBro.textContent = `You've got ${calcHp(hp)} HP. You're doin really great bud, keep on culting`
+    else{
+        youGoodBro.textContent = `You've got ${calcPoints(hp)} extra lives. You're doin really great bud, keep on culting`
         pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
     }
 }
 
 
 function makeCards(){
-        allInfo.map(singleCard =>{
+        var i
+        for(i = 0; i < allInfo.length; i++){
         const card = document.createElement('div')
         const cardImg = document.createElement('img')
         card.className = 'oneCard'
@@ -217,6 +221,7 @@ function makeCards(){
         cardImg.className = "cardImg"
         card.append(cardImg)
         cardBox.append(card)
-    })
-}
+        }
+    }
+
  
