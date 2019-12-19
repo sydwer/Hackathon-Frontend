@@ -1,4 +1,3 @@
-// const CardBox = document.querySelector('div') //card with flip toggle
 const cardBox = document.getElementById('innerDiv')
 const body = document.querySelector('body')
 const pointsCounter = document.querySelector('h1')
@@ -187,22 +186,29 @@ cardBox.addEventListener("click", flip)
 function flip(event){
     const {className} = event.target 
     console.log(event.target)
-    if (className === "cardImg"){
+    if (className === "cardImg" && calcPoints(hp) > -1){
         const randoPic = allInfo[Math.floor(Math.random()*allInfo.length)]
         points.push(randoPic.points)
         hp.push(randoPic.extra_life)
         event.target.src = randoPic.img
         event.target.classList.toggle('flipped')
         calcPoints(hp)
-        console.log(hp)
     } 
-    if (calcPoints(hp) < 0){
+    if (calcPoints(hp) < 0 && calcPoints(points) === 0){
+        pointsCounter.textContent = 'The Exalted One laughs at your inability to aquire points.'
+        youGoodBro.textContent = "You've died, and your culting days are over before they even truly began"
+        alert("News From The Exalted One, He Who Knows All: Spoiler Alert, You Did The One Thing I Told You Not To")
+        gameOver()
+    }else if(calcPoints(hp) < 0){
         pointsCounter.textContent = 'The Exalted One claims your points.'
         youGoodBro.textContent = "You've died, and your culting days are over"
-        alert("News From The Exalted One, He Who Knows All: Spoiler Alert, You Did The One Thing I Told You Not To ")
-    }else if(calcPoints(hp) === 0){
+        alert("News From The Exalted One, He Who Knows All: Spoiler Alert, You Did The One Thing I Told You Not To")
+        gameOver()
+    }
+    else if(calcPoints(hp) === 0){
         youGoodBro.textContent = `You've only got one life, cult with care`
         pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
+        
     }
     else{
         youGoodBro.textContent = `You've got ${calcPoints(hp)} extra lives. You're doin really great bud, keep on culting`
@@ -210,7 +216,18 @@ function flip(event){
     }
 }
 
-
+function gameOver(){
+    const message = document.createElement('div')
+    const gameOver = document.createElement('h1')
+    const punch = document.createElement('h2')
+    const refresh = document.createElement('h3')
+    message.className = 'message'
+    gameOver.textContent = 'GAME OVER'
+    punch.textContent = 'You Drank One Too Many Punches'
+    refresh.textContent = 'Refresh the Page to Be Born Again'
+    message.append(gameOver,punch, refresh)
+    cardBox.appendChild(message)
+}
 function makeCards(){
         var i
         for(i = 0; i < allInfo.length; i++){

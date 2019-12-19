@@ -29,7 +29,9 @@ body{
 }
 
 .oneCard>img:hover{
-    box-shadow: 10px 15px 5px #702c2b
+    box-shadow: 30px 30px 150px #790202;
+    /* box-shadow: 0 0 50px 50px #7902026e; */
+ 
 }
 
 .cardImg{
@@ -54,4 +56,45 @@ h2{
     color: #bab38d;
     font-size: 3.66rem;
     font-family: 'Slabo 27px', serif;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 100rem;
+    height: 45rem;
+    background-image: linear-gradient(#efe8c6, #900803);
+    border: 25px solid black;
+}
+.message> h1{
+    margin: 0;
+    padding-bottom: 2rem;
+    color: black;
+    font-size: 10rem;
+    font-family: 'Slabo 27px', serif;
+    text-shadow: 5px 5px 5px #900803;
+}
+.message > h2{
+    margin: 0;
+    margin-top: 6rem;
+    color: black;
+    font-size: 7rem;
+    font-family: 'Slabo 27px', serif;
+}
+
+.message > h3{
+    color: black;
+    font-size: 4.5rem;
+    font-family: 'Slabo 27px', serif;
+    text-decoration: underline;
+}
+
+.flipped:hover{
+    position: absolute;  
+    height: 100rem;
+    width: 60rem;
 }
