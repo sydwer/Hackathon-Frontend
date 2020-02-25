@@ -10,7 +10,7 @@ students (listed above).
 ### Story/Rules:
 _Don't Drink The Punch_ is a cult themed card game. Players are tasked with flipping over cards one a time. Each card face has a 
 "cult related item or action" and text describing it. 
-Cards can have one of four effects: **Earn points**, **lose points**, **gain an extra life**, or **lose a life**.
+Cards can have four effects: **Earn points**, **lose points**, **gain an extra life**, or **lose a life**.
 
 -Players have an initial score of _0 points_ and _0 extra lives_
 -Players click on a card, one at a time, to flip it over and reveal what item/ effect they will recieve.
