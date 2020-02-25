@@ -15,7 +15,7 @@ Cards can have one of four effects: **Earn points**, **lose points**, **gain an 
 -Players have an initial score of _0 points_ and _0 extra lives_
 -Players click on a card, one at a time, to flip it over and reveal what item/ effect they will recieve.
 
-  -Example: Flipping over a **Bring Your Own Punch** card, gives the player 30 points and an extra life._
+  _Example: Flipping over a **Bring Your Own Punch** card, gives the player 30 points and an extra life._
   
 -The game ends when the player draws a punch card and the life count hits zero.
 
