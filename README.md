@@ -19,7 +19,7 @@ Cards can have one of four effects: **Earn points**, **lose points**, **gain an 
   
 -The game ends when the player draws a punch card and the life count hits zero.
 
-##Technologies:
+## Technologies:
 -Ruby on Rails 
 -JavaScript
 
@@ -27,7 +27,7 @@ Cards can have one of four effects: **Earn points**, **lose points**, **gain an 
 -The backend database needs to be updated with proper links to the card images.
 -Upon fixing the image links, the game's distribution of card types will be better balanced and the game will function as intended.
 
-##Status:
+## Status:
 The game is not yet deployed, but will be upon updating the database as stated in the above section.  
 
 
