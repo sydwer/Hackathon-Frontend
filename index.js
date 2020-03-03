@@ -182,11 +182,15 @@ function store(response){
     makeCards(cards)
 }
 cardBox.addEventListener("click", flip)
+function playSound(){
+    const sound = new Audio('card_flip.mp3');
+    sound.play();
+}
 
 function flip(event){
     const {className} = event.target 
-    console.log(event.target)
     if (className === "cardImg" && calcPoints(hp) > -1){
+        playSound()
         const randoPic = allInfo[Math.floor(Math.random()*allInfo.length)]
         points.push(randoPic.points)
         hp.push(randoPic.extra_life)
