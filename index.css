@@ -3,10 +3,10 @@
 header{
     font-family: 'Amatic SC', cursive;
     color:red;
-    height: 12rem;
-    font-size: 15rem;
+    height: 4rem;
+    font-size: 4.2rem;
     padding-left: 20px;
-    padding-bottom: 8rem;
+    padding-bottom: 1rem;
 }
 
 #innerDiv{
@@ -46,7 +46,7 @@ h1{
     padding-left: 20px;
     padding-bottom: 20px;
     color: #bab38d;
-    font-size: 4rem;
+    font-size: 1.5rem;
    font-family: 'Slabo 27px', serif;
 }
 
@@ -54,7 +54,7 @@ h2{
     padding-left: 20px;
     padding-bottom: 20px;
     color: #bab38d;
-    font-size: 3.66rem;
+    font-size: 1.5rem;
     font-family: 'Slabo 27px', serif;
 }
 
