@@ -190,7 +190,7 @@ function playSound(){
 function flip(event){
     const {className} = event.target 
     if (className === "cardImg" && calcPoints(hp) > -1){
-        playSound();
+        playSound()
         const randoPic = allInfo[Math.floor(Math.random()*allInfo.length)]
         points.push(randoPic.points)
         hp.push(randoPic.extra_life)
