@@ -7,7 +7,7 @@ Project by: Jess Werbach, Patrick Hoen, Kelly Rudnicki, and Parker Bacall
 _Don't Drink The Punch_ is a project built in under a day for Flatiron School's Hackathon. The project was created by a group of four
 students (listed above).
 
-#### Screencapture Links
+#### Screencapture Links:
 
 [Starting Screen](https://drive.google.com/open?id=1kE0rVrTlf6mTUxJ214spWO27XKccPQzS)
 
