@@ -215,16 +215,7 @@ function controlMusic(){
         playMusic();
     }
 }
-// function controlMusic(){
-//     console.log("howdy doody")
-//     if(music.className === "off"){
-//         playMusic();
-//         music.className = "on"  
-//     }else if(music.className === "on"){
-//         console.log("test")
-//         music.pause();
-//     }
-// }
+
 
 function playMusic(){
     music.play();
