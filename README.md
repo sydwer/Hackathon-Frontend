@@ -13,6 +13,10 @@ students (listed above).
 
 [Example Card](https://drive.google.com/open?id=13BEflyNPnCCJNZEjzum8fPp1K-_6Sd1e)
 
+#### Video Demo Link:
+
+[Youtube](https://youtu.be/BXx8INgXRus)
+
 ### Story/Rules:
 _Don't Drink The Punch_ is a cult themed card game. Players are tasked with flipping over cards one a time. Each card face has a cult related item or action and text describing it. 
 
