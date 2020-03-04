@@ -16,6 +16,8 @@ header{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 body{
@@ -76,39 +78,44 @@ h2{
     box-shadow: 0px 0px 20px grey;
 }
 
+#musicButton:focus{
+    outline: none;
+}
+
 .message{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     top: 50%;
-    left: 30%;
-    width: 100rem;
-    height: 45rem;
+    left: 20%;
+    width: 50rem;
+    height: 20rem;
     background-image: linear-gradient(#efe8c6, #900803);
-    border: 25px solid black;
+    border: 5px solid black;
 }
 .message> h1{
     margin: 0;
-    padding-bottom: 2rem;
+    padding-bottom: 20px;
     color: black;
-    font-size: 10rem;
+    font-size: 6rem;
     font-family: 'Slabo 27px', serif;
     text-shadow: 5px 5px 5px #900803;
 }
 .message > h2{
     margin: 0;
-    margin-top: 6rem;
+    margin-top: 20px;
     color: black;
-    font-size: 7rem;
+    font-size: 3.3rem;
     font-family: 'Slabo 27px', serif;
 }
 
 .message > h3{
     color: black;
-    font-size: 4.5rem;
+    font-size: 2.2rem;
     font-family: 'Slabo 27px', serif;
     text-decoration: underline;
+    padding-bottom: 10px;
 }
 
 .flipped:hover{
