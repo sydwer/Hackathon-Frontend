@@ -7,10 +7,11 @@ header{
     font-size: 4.2rem;
     padding-left: 20px;
     padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 #innerDiv{
-   
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -56,6 +57,23 @@ h2{
     color: #bab38d;
     font-size: 1.5rem;
     font-family: 'Slabo 27px', serif;
+}
+
+#musicButton{
+    background-color: transparent;
+    height: 50px;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 25%;
+    border: none;
+    box-shadow: 0px 0px 20px #f44336c4;
+    color: #bab38d85;
+    font-size: large;
+}
+
+#musicButton:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px grey;
 }
 
 .message{

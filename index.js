@@ -1,7 +1,7 @@
 const cardBox = document.getElementById('innerDiv')
 const body = document.querySelector('body')
 const pointsCounter = document.querySelector('h1')
-const youGoodBro = document.querySelector('h2')
+const statusBar = document.querySelector('h2')
 
 let cards = []
 let points = []
@@ -163,8 +163,8 @@ img:'https://lj3wtq.ch.files.1drv.com/y4mZdAKwlq4brCcZx6T4B7TYWNQlSkF6TLf-Wtyv_L
     extra_life: 0,
     points:  200
 },
-
 ]
+const music = new Audio("./music.mp3")
 
 // fetch('http://127.0.0.1:3000/cards')
 fetch('https://pokeapi.co/api/v2/')
@@ -178,8 +178,31 @@ function calcPoints(info){
 
 
 function store(response){
-    cards = response
-    makeCards(cards)
+    cards = response;
+    makeCards(cards);
+    makeMusicButton();
+}
+
+function makeCards(){
+    var i
+    for(i = 0; i < allInfo.length; i++){
+    const card = document.createElement('div')
+    const cardImg = document.createElement('img')
+    card.className = 'oneCard'
+    cardImg.src = 'card_back.png'
+    cardImg.className = "cardImg"
+    card.append(cardImg)
+    cardBox.append(card)
+    }
+}
+
+function makeMusicButton(){
+    const header = document.querySelector('header')
+    const musicButton = document.createElement('button');
+    musicButton.textContent = "Play Music";
+    musicButton.id = "musicButton";
+    header.appendChild(musicButton)
+    musicButton.addEventListener("click", music.play());
 }
 cardBox.addEventListener("click", flip)
 function playSound(){
@@ -200,22 +223,22 @@ function flip(event){
     } 
     if (calcPoints(hp) < 0 && calcPoints(points) === 0){
         pointsCounter.textContent = 'The Exalted One laughs at your inability to aquire points.'
-        youGoodBro.textContent = "You've died, and your culting days are over before they even truly began"
+        statusBar.textContent = "You've died, and your culting days are over before they even truly began"
         alert("News From The Exalted One, He Who Knows All: Spoiler Alert, You Did The One Thing I Told You Not To")
         gameOver()
     }else if(calcPoints(hp) < 0){
         pointsCounter.textContent = 'The Exalted One claims your points.'
-        youGoodBro.textContent = "You've died, and your culting days are over"
+        statusBar.textContent = "You've died, and your culting days are over"
         alert("News From The Exalted One, He Who Knows All: Spoiler Alert, You Did The One Thing I Told You Not To")
         gameOver()
     }
     else if(calcPoints(hp) === 0){
-        youGoodBro.textContent = `You've only got one life, cult with care`
+        statusBar.textContent = `You've only got one life, cult with care`
         pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
         
     }
     else{
-        youGoodBro.textContent = `You've got ${calcPoints(hp)} extra lives. You're doin really great bud, keep on culting`
+        statusBar.textContent = `You've got ${calcPoints(hp)} extra lives. You're doin really great bud, keep on culting`
         pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
     }
 }
@@ -232,17 +255,17 @@ function gameOver(){
     message.append(gameOver,punch, refresh)
     cardBox.appendChild(message)
 }
-function makeCards(){
-        var i
-        for(i = 0; i < allInfo.length; i++){
-        const card = document.createElement('div')
-        const cardImg = document.createElement('img')
-        card.className = 'oneCard'
-        cardImg.src = 'card_back.png'
-        cardImg.className = "cardImg"
-        card.append(cardImg)
-        cardBox.append(card)
-        }
-    }
+// function makeCards(){
+//         var i
+//         for(i = 0; i < allInfo.length; i++){
+//         const card = document.createElement('div')
+//         const cardImg = document.createElement('img')
+//         card.className = 'oneCard'
+//         cardImg.src = 'card_back.png'
+//         cardImg.className = "cardImg"
+//         card.append(cardImg)
+//         cardBox.append(card)
+//         }
+//     }
 
  
