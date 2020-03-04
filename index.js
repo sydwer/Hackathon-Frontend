@@ -260,12 +260,12 @@ function flip(event){
     }
     else if(calcPoints(hp) === 0){
         statusBar.textContent = `You've only got one life, cult with care`
-        pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
+        pointsCounter.textContent = `You have ${calcPoints(points)} points, good job!`
         
     }
     else{
         statusBar.textContent = `You've got ${calcPoints(hp)} extra lives. You're doin really great bud, keep on culting`
-        pointsCounter.textContent = `You have ${calcPoints(points)} points, you go glen coco`
+        pointsCounter.textContent = `You have ${calcPoints(points)} points, keep going!`
     }
 }
 
