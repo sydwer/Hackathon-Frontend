@@ -164,7 +164,7 @@ img:'https://lj3wtq.ch.files.1drv.com/y4mZdAKwlq4brCcZx6T4B7TYWNQlSkF6TLf-Wtyv_L
     points:  200
 },
 ]
-const music = new Audio("./music.mp3")
+
 
 // fetch('http://127.0.0.1:3000/cards')
 fetch('https://pokeapi.co/api/v2/')
@@ -196,15 +196,50 @@ function makeCards(){
     }
 }
 
+let musicStatus = "off";
 function makeMusicButton(){
     const header = document.querySelector('header')
     const musicButton = document.createElement('button');
     musicButton.textContent = "Play Music";
     musicButton.id = "musicButton";
     header.appendChild(musicButton)
-    musicButton.addEventListener("click", music.play());
+    
+    music = new Audio("./music.mp3")
+    musicButton.addEventListener("click", controlMusic);
+}
+
+function controlMusic(){
+    if(musicStatus === "on"){
+        pauseMusic();
+    }else{
+        playMusic();
+    }
+}
+// function controlMusic(){
+//     console.log("howdy doody")
+//     if(music.className === "off"){
+//         playMusic();
+//         music.className = "on"  
+//     }else if(music.className === "on"){
+//         console.log("test")
+//         music.pause();
+//     }
+// }
+
+function playMusic(){
+    music.play();
+    music.volume = 0.5;
+    musicStatus = "on";
+    musicButton.textContent = "Pause Music";
+}
+
+function pauseMusic(){
+    music.pause();
+    musicStatus = "off";
+    musicButton.textContent = "Play Music"
 }
 cardBox.addEventListener("click", flip)
+
 function playSound(){
     const sound = new Audio('card_flip.mp3');
     sound.play();
